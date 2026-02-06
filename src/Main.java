@@ -6,7 +6,6 @@ public class Main implements Runnable {
 
     public Main(String name) {
         this.name = name;
-        System.out.printf("constructor %s%n", this.getName());
     }
 
     public static void main(String[] args) {
@@ -33,6 +32,6 @@ public class Main implements Runnable {
     @Override
     public void run() {
         LazyInitializedSingleton ls = LazyInitializedSingleton.getInstance();
-        System.out.printf("runner %s-%s%n", this.getName(), ls.hashCode());
+        System.out.printf("%s-%s%n", this.getName(), ls.hashCode());
     }
 }
